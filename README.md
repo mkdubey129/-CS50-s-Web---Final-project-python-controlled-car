@@ -41,47 +41,60 @@ and exchange (emit & listen) data with client
 	
 -right top side:
 
---arming rear engine (if automatically not armed)
+----arming rear engine (if automatically not armed)
 	
---slow mode (constant slow speed)
+----slow mode (constant slow speed)
 	
---camera on/off
+----camera on/off
 	
---capture a picture 
+----capture a picture 
 	
---gallery button (display gallery in new tab)
+----gallery button (display gallery in new tab)
 	
 
-4. pictures.html it loads data from database - humidity, pressure, temp, date , time and picture filename. 
+4. pictures.html loads data from database - humidity, pressure, temp, date , time and picture filename. 
 Pictures are stored in static folder . Everything is loaded to table with Jinja2.
 
 5. styles.css contain all styling
+
 line "user-select:none;" disable text-selection (sometimes text was selected when smaller <svg> was dragged)
+	
 body's overflow is set to hidden to disable pull-down-to-refresh feature
 (sometimes dragging <svg> down browser reload the entire page)
 
-6. script.js client side code , communicate with server side , mainly <svg> events controll car movement
+6. script.js client side code , communicate with server side , mainly SVG events control car movement
 
 7. database.db  I used sqlite3 to keep database localy as car has no internet connection yet
+
 database contain picture filename and readings from all sensors plus date and time
 
-8. requirements.txt except flask and flask-SocketIO
- , adafruit_motorkit need to be imported
+8. requirements.txt except flask and flask-SocketIO, adafruit_motorkit need to be imported
 (to controll front engine), sense_hat ( to read all sensors) and adafruit_ads1x15.analog_in
 (to convert analog singnal from encoder do digital version for Raspberry Pi) 
 
 
 Wiring:
+
 I removed oryginal board and battery, both engines with gears stay on places.
+
 Parts used:
+
 -Raspberry Pi 3 B+
+
 -DC & Stepper Motor HAT
+
 -Sense HAT
+
 -ADS1115 I2C 4 Analog/Digital Converter
+
 -Raspberry Pi Camera Board V2
+
 -Lipo Battery Low Voltage Alarm
+
 -Battery 3S 11.1V 3000mAh 30C Li-Po
+
 -60A Brushed Electric Speed Controller
+
 -power manager soldered myself out of two resistors (step down 5V to 3V3)
 
 
