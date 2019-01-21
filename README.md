@@ -95,6 +95,6 @@ Parts used:
 
 -60A Brushed Electric Speed Controller
 
--power manager soldered myself out of two resistors (step down 5V to 3V3)
+-power manager soldered myself (step down 5V to 3V3)
 
 
