@@ -1,4 +1,5 @@
-My final project for: HarvardX: CS50W
+My final project for: HarvardX: CS50W.
+
 CS50's Web Programming with Python and JavaScript
 It is a python controlled car. 
 
