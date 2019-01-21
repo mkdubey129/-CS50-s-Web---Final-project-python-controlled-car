@@ -1,11 +1,12 @@
 My final project for: HarvardX: CS50W.
-
 CS50's Web Programming with Python and JavaScript
+
 It is a python controlled car. 
 
 Installed latest Raspbian , a version of linux on Raspberry Pi 3 B+
+
 It supports python3 together with Flask and SocketIO
-so my web server is running physically on the car.
+so web server is running physically on the car.
 
 Server is visible across the local network for other machines. 
 Access to website on port :5000. 
