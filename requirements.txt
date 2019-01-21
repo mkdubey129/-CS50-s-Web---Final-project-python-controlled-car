@@ -1,0 +1,7 @@
+flask
+
+flask-SocketIO
+
+adafruit_motorkit
+sense_hat
+adafruit_ads1x15.analog_in

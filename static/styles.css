@@ -1,0 +1,157 @@
+* {
+    user-select:none;
+    font-size:1.2vw;
+    font-family: "audiowide";
+    //border:1px solid green;
+}
+body {
+    overflow:hidden; /*prevent pull-down-to-refresh*/
+}
+#svg_control {
+    position: absolute;
+    bottom:0;
+    right:0;
+    width:30vw;
+    height: 30vw;
+}
+
+#power {
+    position: absolute;
+    top:0;
+    left:0;
+    width:9vw;
+    height: 100%;
+    //border: 1px solid red;
+    z-index:0;
+}
+#power_label {
+    
+    position:absolute;
+    top:0;
+    left:9vw;
+    width:3vw;
+    height:100%;
+    //border:1px solid blue;
+
+}
+#switches {
+    position:absolute;
+    top:0;
+    right:0;
+    width:15vw;
+    height:50%;
+    
+}
+
+#cameraWrapper {
+    position:relative;
+    width:70vw;
+    height:80vh;
+    margin:auto;
+    //border: 1px solid red;
+}
+#sensors {
+    width:70vw;
+    height:20vh;
+    margin:auto;
+    //border:1px solid blue;
+}
+
+#camera_off {
+    visibility:hidden;
+    position:absolute;
+    z-index:3459;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+td {
+    font-family: serif;
+}
+
+
+
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.3vw;
+  height: 2vw;
+
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+
+  transition: .4s;
+}
+
+.slider:before {
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 1.9vw;
+  width: 1.9vw;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+
+  transition: .4s;
+  
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.3vw);
+}
+
+
+
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fcf;
+  border-color: #fcf transparent #fcf transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
