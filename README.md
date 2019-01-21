@@ -11,8 +11,8 @@ so web server is running physically on the car.
 Server is visible across the local network for other machines. 
 Access to website on port :5000. 
 It has 8MP camera streaming to port 8081.
-I inserted this address to "href" attribute of <img> tag.
-Most important element of rendered website is <svg> tag , basically two circles used for 
+I inserted this address to "href" attribute of IMG tag.
+Most important element of rendered website is SVG tag , basically two circles used for 
 controlling direction and acceleration of car.
 
 It is responsive, runs well on mobile phones, tablets and laptops, however 
@@ -27,19 +27,30 @@ Files:
 connected to local network
 
 2. application.py main app file , import all modules , perform some settings, render websites
-and exchange(emit & listen) data with client
+and exchange (emit & listen) data with client
 
 3. index.html main website, I used touch events rather then click to support touchscreens
+
 -left side controlls power of rear engine
+
 -center displays camera streaming 
+
 -on the bottom are reading from sennsors
--right bottom corner contain <svg> for controlling
+
+-right bottom corner contain SVG for controlling
+	
 -right top side:
-	-arming rear engine (if automatically not armed)
-	-slow mode (constant slow speed)
-	-camera on/off
-	-capture a picture 
-	-gallery button (display gallery in new tab)
+
+--arming rear engine (if automatically not armed)
+	
+--slow mode (constant slow speed)
+	
+--camera on/off
+	
+--capture a picture 
+	
+--gallery button (display gallery in new tab)
+	
 
 4. pictures.html it loads data from database - humidity, pressure, temp, date , time and picture filename. 
 Pictures are stored in static folder . Everything is loaded to table with Jinja2.
